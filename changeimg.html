@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Effect</title>
+    <!-- CSS styling -->
+    <style>
+        body {
+            background: linear-gradient(to left, #ea3f89, #60022b);
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: bold;
+            padding: 50px;
+        }
+        #text {
+             margin-top: 15%;
+            font-size: 60px;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+             background-color: rgb(80, 2, 36); 
+            color: #f6f5f5;
+        }
+    </style>
+    <script>
+        //Function to change background image on hover
+        function showBackground() {
+            document.body.style.background = "url('image.png')";
+            document.body.style.backgroundSize = "cover";
+            document.getElementById("text").innerText = "Bloom where you are planted.";
+        }
+        //Function to revert background when mouse leaves
+        function removeBackground() {
+            document.body.style.background = "linear-gradient(to left, #ea3f89, #60022b)";
+            document.getElementById("text").innerText = "Some flowers never bloom.";
+        }
+    </script>
+</head>
+<body>
+    <p id="text" onmouseover="showBackground()" onmouseout="removeBackground()">Some flowers never bloom.</p>
+</body>
+</html>
